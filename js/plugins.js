@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
     var b = require("./zepto");
     b=require("./ylmusic");
-    var c = require("./Lottery"),
+    var c = require("./mask"),
         d = (require("./global"), require("./page")),
         e = require("./media"),
         f = require("./video"),
