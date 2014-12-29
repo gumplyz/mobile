@@ -1,12 +1,12 @@
-var LazyImage=(function(a) {
-    var b = Zepto,
-        c = page,
+define(function (require, exports, module) {
+    var b = require("./zepto"),
+        c = require("./page"),
         d = {
             lazy_img: function() {
                 var a = b(".lazy-img");
                 a.each(function() {
                     var a = b(this);
-                    if (a.is("img")) a.attr("src", "loading_large.gif");
+                    if (a.is("img")) a.attr("src", "img/loading_large.gif");
                     else {
                         var c = a.css("background-position"),
                             d = a.css("background-size");
@@ -16,7 +16,7 @@ var LazyImage=(function(a) {
                         }), "no" == a.attr("data-bg") && a.css({
                             "background-repeat": "no-repeat"
                         }), a.css({
-                            "background-image": "url(loading_large.gif)",
+                            "background-image": "url(img/loading_large.gif)",
                             "background-size": "120px 120px",
                             "background-position": "center"
                         }), "no" == a.attr("data-image") && a.css({
@@ -97,4 +97,4 @@ var LazyImage=(function(a) {
             d.lazy_load()
         }, 200)
     }), d
-})();
+});

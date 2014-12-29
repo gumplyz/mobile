@@ -1,60 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="ch">
+    <title>test page</title>
     <meta charset="UTF-8">
     <meta name="apple-touch-fullscreen" content="YES" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <meta name="viewport" content="user-scalable=0, initial-scale=0.5">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <script type="text/javascript">
+        var jsVer = 29;
+        var phoneWidth = parseInt(window.screen.width);
+        var phoneScale = phoneWidth/640;
+
+        var ua = navigator.userAgent;
+        if (/Android (\d+\.\d+)/.test(ua)){
+            var version = parseFloat(RegExp.$1);
+            // andriod 2.3
+            if(version>2.3){
+                document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+                // andriod 2.3以上
+            }else{
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+            // 其他系统
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
 <body>
+<section class="u-audio f-hide" data-src="audio/53f305621cd0a57883.mp3">
+    <p id="coffee_flow" class="btn_audio">
+        <strong class="txt_audio z-hide">关闭</strong>
+        <span class="css_sprite01 audio_open"></span>
+    </p>
+</section>
 <section class="p-ct transformNode-3d">
     <div id="j-mengban" class="translate-front z-show" data-open="1" >
         <div class="mengban-warn"></div>
     </div>
     <div class="translate-back f-hide">
         <input id="ca-tips" type="hidden" value="">
-        <input id="r-cover" type="hidden" value="53f30324cd869.jpg">
+        <input id="r-cover" type="hidden" value="img/53f30324cd869.jpg">
         <div class="m-page m-fengye f-hide" data-page-type="info_pic3" data-statics="info_pic3">
-            <div class="page-con lazy-img" data-src="53f3036ab120457883.jpg"></div>
+            <div class="page-con lazy-img" data-src="img/53f3036ab120457883.jpg"></div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f3038b069f657884.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f3038b069f657884.jpg">
             </div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f303a0637b857885.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f303a0637b857885.jpg">
             </div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f303bcc369257886.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f303bcc369257886.jpg">
             </div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f46e49dbc0a57887.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f46e49dbc0a57887.jpg">
             </div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f304276bdf357888.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f304276bdf357888.jpg">
             </div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f3040f788b357889.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f3040f788b357889.jpg">
             </div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f46e55931cf57890.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f46e55931cf57890.jpg">
             </div>
         </div>
         <div class="m-page m-video f-hide" data-page-type="video" data-statics="video_list">
-            <div class="page-con lazy-img" data-src="53f46e65e36bd.jpg">
+            <div class="page-con lazy-img" data-src="img/53f46e65e36bd.jpg">
                 <div class="video-title" style="color:#FFFFFF;">
                     <h3 class="f-tc"></h3>
                 </div>
-                <div class="video-con j-video" data-video-type="bendi" data-video-src="53f304a21bc9b57891.mp4">
-                    <div class="img lazy-img" data-src="53f3045f588ad57891.jpg">
+                <div class="video-con j-video" data-video-type="bendi" data-video-src="video/53f304a21bc9b57891.mp4">
+                    <div class="img lazy-img" data-src="img/53f3045f588ad57891.jpg">
                         <span class="css_sprite01"></span>
                     </div>
                     <div class="u-maskLayer video f-hide">
@@ -66,61 +92,26 @@
             </div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f46e79c645357892.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f46e79c645357892.jpg">
             </div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f46e866d0c757893.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f46e866d0c757893.jpg">
             </div>
-            <div class="bigTxt-btn bigTxt-btn-wx lazy-img" data-src="53f304ee59d7657893.png"><a href="javascript:void(0)"></a></div>
-            <div class="bigTxt-weixin"><img src="53f305156d387.jpg"></div>
+            <div class="bigTxt-btn bigTxt-btn-wx lazy-img" data-src="img/53f304ee59d7657893.png"><a href="javascript:void(0)"></a></div>
+            <div class="bigTxt-weixin"><img src="img/53f305156d387.jpg"></div>
         </div>
         <div class="m-page m-bigTxt f-hide" data-page-type="bigTxt" data-statics="info_list">
-            <div class="page-con j-txtWrap lazy-img" data-src="53f481ea0b6ff57894.jpg">
+            <div class="page-con j-txtWrap lazy-img" data-src="img/53f481ea0b6ff57894.jpg">
             </div>
-            <div class="bigTxt-btn lazy-img" data-src="53f474adbf44057894.png"><a href="tel:4000168906"></a></div>
+            <div class="bigTxt-btn lazy-img" data-src="img/53f474adbf44057894.png"><a href="tel:4000168906"></a></div>
         </div>
     </div>
 </section>
-<input id="ca-tips" type="hidden" value="">
-<script src="zepto.js"></script>
-<script src="global.js"></script>
-<script src="page.js"></script>
-<script src="lazyImage.js"></script>
-<script src="mask.js"></script>
-<script src="video.js"></script>
-<script src="event.js"></script>
+
+<script src="js/seajs/sea-debug.js"></script>
+<script src="js/init.js"></script>
 
 
-<script>
-    $(window).on("load", function() {
-        var windowHeight=$(window).height();
-        $(".p-ct").height(windowHeight);
-        $(".m-page").height(windowHeight);
-        $("#j-mengban").height(windowHeight);
-        $(".translate-back").height(windowHeight);
-
-        $(".m-fengye").removeClass("f-hide");
-        page._page.eq(page._pageNow).height($(window).height());
-
-        setTimeout(function() {
-            $(".translate-back").removeClass("f-hide")
-        }, 900);
-
-        var a = Zepto("#j-mengban")[0];
-        var b="53f30324cd869.jpg";
-        var c="image";
-        var d=640;
-        var e=windowHeight;
-        var f = function(){
-            page.page_start();
-            Zepto("#j-mengban").removeClass("z-show").addClass("f-hide");
-        };
-        var mask= new Mask(a, b, c, d, e, f);
-        mask.init();
-
-        video.video_init();
-    });
-</script>
 </body>
 </html>

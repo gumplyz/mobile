@@ -1,6 +1,6 @@
-(function(){
-    var b = Zepto,
-        c = Global;
+define(function (require, exports, module) {
+    var b = require("./zepto"),
+        c = require("./global");
     return window.page = {
         _page: b(".m-page"),
         _pageNum: b(".m-page").size(),
@@ -79,5 +79,5 @@
         }
     }, b(function() {
         b(window).on("resize", function() {})
-    })
-})();
+    }), page
+});
