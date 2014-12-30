@@ -4,6 +4,7 @@ define(function (require, exports, module) {
         page = require("./page"),
         media = require("./media");
     require("./image"), require("./event"), require("./plugins");
+    var teletex=require("./teletextmain");
     module.exports = {
         init_modle: function () {
             global._scrollStop(), document.body.style.userSelect = "none", document.body.style.mozUserSelect = "none", document.body.style.webkitUserSelect = "none", eval(function (a, b, c, d, e, f) {
@@ -42,7 +43,8 @@ define(function (require, exports, module) {
                     }, 90))
                 }, a);
 
-            }), $(".p-ct").height($(window).height()), $(".m-page").height($(window).height()), $("#j-mengban").height($(window).height()), $(".translate-back").height($(window).height())
+            }), $(".p-ct").height($(window).height()), $(".m-page").height($(window).height()), $("#j-mengban").height($(window).height()), $(".translate-back").height($(window).height());
+            teletex.init();
         }
     }
 });
