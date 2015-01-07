@@ -69,6 +69,8 @@ define(function (require, exports, module) {
             var d = page._touchDeltaY > 0 ? b(window).height() / 5 : -b(window).height() / 5,
                 e = .8;
             page._page.eq(page._pageNow)[0].style[c._prefixStyle("transform")] = "translate(0," + d + "px)" + a + " scale(" + e + ")", c._handleEvent("success")
+            page._page.eq(page._pageNow).removeClass("page-current");
+            page._page.eq(page._pageNext).addClass("page-current");
         },
         page_fial: function() {
             var a = c._translateZ();

@@ -1233,3 +1233,20 @@ textarea:focus,input:focus { border: 1px solid #71b643; }
     }
 }
 
+/*页面内容图片动画效果*/
+
+.m-page.page-current .tit {
+    -webkit-transform: translateY(0);
+}
+.m-page .tit {
+    position: absolute;
+    -webkit-transform: translateY(100%);
+    -webkit-transition: all .8s;
+}
+.txtAd{
+    font-size: 80px;
+    font-weight:bold;
+    font-style: italic;
+    color: white;
+    margin:50% 0;
+}
